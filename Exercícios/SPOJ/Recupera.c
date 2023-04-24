@@ -3,49 +3,45 @@
 int main()
 {
 
-    int instancia = 0;
-    int numero_achado = 0;
-    int soma = 0;
     int n;
+    int instancia = 0;
+    int soma = 0;
 
-    scanf("%i", &n);
-
-    while (n != 0)
+    while (scanf("%i", &n) != EOF)
     {
-        instancia = instancia + 1;
-        int lista[n - 1];
-
-        for (int i = 0; i <= n - 1; i++)
+        if (n <= 0 || n > 100)
         {
-            scanf("%i", &lista[i]);
-        }
-
-        for (int i = 0; i <= n - 1; i++)
-        {
-            soma = soma + lista[i];
-            printf("Posicao: %i\t", lista[i] - 1);
-            printf("Soma: %i\n", soma);
-
-            for (int j = n - 1; j >= i; j--)
-            {
-                if (soma == lista[j])
-                {
-                    numero_achado = soma;
-                    break;
-                }
-            }
-        }
-        printf("Instância %i\n", instancia);
-        if (numero_achado)
-        {
-            printf("%i\n", numero_achado);
+            scanf("%i", &n);
         }
         else
         {
-            printf("nao achei");
-        }
-        scanf("%i", &n);
-    }
+            instancia = instancia + 1;
+            soma = 0;
+            int lista[n];
 
+            for (int i = 0; i <= n - 1; i++)
+            {
+                scanf("%i", &lista[i]);
+            }
+
+            for (int j = 0; j <= n - 1; j++)
+            {
+                if (soma == lista[j])
+                {
+                    printf("Instancia %i\n", instancia);
+                    printf("%i\n", soma);
+                }
+                else if (soma != lista[j])
+                {
+                    soma = soma + lista[j];
+                }
+                else
+                {
+                    printf("nao achei");
+                }
+            }
+        }
+    }
+    scanf("%i", &n);
     return 0;
 }
