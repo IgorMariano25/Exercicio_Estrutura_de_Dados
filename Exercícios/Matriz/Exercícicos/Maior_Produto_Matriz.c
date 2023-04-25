@@ -13,7 +13,7 @@ int main()
             if (matriz_1[linha][coluna] > maior_valor_matriz)
             {
                 maior_valor_matriz = matriz_1[linha][coluna];
-            } 
+            }
             contador++;
         }
     }
