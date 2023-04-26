@@ -52,7 +52,8 @@ int main()
         }
     }
 
-    imprimi_arry(array_inteiros, tamanho_arry_inteiros);
+    printf("Quantidade de valores inteiros lidos: %i\n", quantidade_valores_arry(array_inteiros, tamanho_arry_inteiros));
+    printf("Quantidade de valores reais lidos: %i\n", quantidade_valores_arry(array_reais, tamanho_arry_reais));
 
     return 0;
 }
