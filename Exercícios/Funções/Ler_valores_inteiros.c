@@ -5,7 +5,7 @@ int ler_inteiros(int array[], int numero, int tamanho_array)
     array[tamanho_array] = numero;
 }
 
-int imprimi_arry(int array[], int tamanho)
+int ler_reais(int array[], int numero, int tamanho_arry)
 {
     for (int i = 0; i < tamanho; i++)
     {
