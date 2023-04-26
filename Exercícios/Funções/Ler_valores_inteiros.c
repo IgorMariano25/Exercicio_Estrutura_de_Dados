@@ -45,6 +45,11 @@ int main()
             ler_inteiros(array_inteiros, valor_informado, tamanho_arry_inteiros);
             tamanho_arry_inteiros++;
         }
+        else if (opcao_escolhida == 2)
+        {
+            ler_reais(array_reais, valor_informado, tamanho_arry_reais);
+            tamanho_arry_reais++;
+        }
     }
 
     imprimi_arry(array_inteiros, tamanho_arry_inteiros);
