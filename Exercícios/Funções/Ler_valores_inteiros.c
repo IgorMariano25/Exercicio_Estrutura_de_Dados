@@ -7,6 +7,12 @@ int ler_inteiros(int array[], int numero, int tamanho_array)
 
 int ler_reais(int array[], int numero, int tamanho_arry)
 {
+    array[tamanho_arry] = numero;
+}
+
+int quantidade_valores_arry(int array[], int tamanho)
+{
+    int quantidade_valores_lidos = 0;
     for (int i = 0; i < tamanho; i++)
     {
         printf("%i ", array[i]);
