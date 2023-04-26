@@ -36,7 +36,11 @@ int main()
             printf("\n");
             break;
         }
-        else
+
+        printf("Informe o arry onde deseja adicionar o valor\n1 - ARRAY INTEIROS\n2 - ARRAY REAIS\nSua escolha sera: ");
+        scanf("%i", &opcao_escolhida);
+
+        if (opcao_escolhida == 1)
         {
             ler_inteiros(array_inteiros, valor_informado, tamanho_arry_inteiros);
             tamanho_arry_inteiros++;
