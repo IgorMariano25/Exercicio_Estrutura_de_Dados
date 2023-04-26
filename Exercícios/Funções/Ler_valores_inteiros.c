@@ -18,7 +18,6 @@ int quantidade_valores_arry(int array[], int tamanho)
         quantidade_valores_lidos++;
     }
 }
-
 int main()
 {
     int array_inteiros[25], tamanho_arry_inteiros = 0;
