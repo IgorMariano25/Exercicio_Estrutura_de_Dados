@@ -12,9 +12,10 @@ int atualizarValoresArray(int array[], int posicao, int valor)
 {
 }
 
-
 int main()
 {
-
+    inserirValoresArray();
+    removerValoresArray();
+    atualizarValoresArray();
     return 0;
 }
