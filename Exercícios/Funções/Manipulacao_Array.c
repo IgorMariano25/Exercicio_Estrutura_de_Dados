@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+int inserirValoresArray()
+{
+}
+
 int main()
 {
 
