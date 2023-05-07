@@ -8,6 +8,10 @@ int removerValoresArray()
 {
 }
 
+int atualizarValoresArray()
+{
+}
+
 int main()
 {
 
