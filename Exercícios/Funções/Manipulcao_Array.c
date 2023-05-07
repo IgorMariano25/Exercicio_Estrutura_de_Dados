@@ -4,6 +4,10 @@ int inserirValoresArray()
 {
 }
 
+int removerValoresArray(int array[], int posicao, int valor)
+{
+}
+
 int main()
 {
 
