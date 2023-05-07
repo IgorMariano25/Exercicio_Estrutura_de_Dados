@@ -3,6 +3,10 @@
 int inserirValoresArray()
 {
 }
+
+int removerValoresArray()
+{
+}
 int main()
 {
 
