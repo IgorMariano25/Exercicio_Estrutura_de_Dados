@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-int inserirValoresArray()
+int inserirValoresArray(int array[], int posicao, int valor)
 {
 }
 
-int removerValoresArray()
+int removerValoresArray(int array[], int posicao, int valor)
 {
 }
 
-int atualizarValoresArray()
+int atualizarValoresArray(int array[], int posicao, int valor)
 {
 }
 
