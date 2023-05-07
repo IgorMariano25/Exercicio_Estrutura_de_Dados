@@ -7,6 +7,10 @@ int inserirValoresArray()
 int removerValoresArray()
 {
 }
+int atualizarValoresArray()
+{
+}
+
 int main()
 {
 
