@@ -14,6 +14,8 @@ int atualizarValoresArray(int array[], int posicao, int valor)
 
 int main()
 {
+    int arrtInteiros[25], posicao, valor;
+
     inserirValoresArray();
     removerValoresArray();
     atualizarValoresArray();
