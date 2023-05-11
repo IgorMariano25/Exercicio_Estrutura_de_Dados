@@ -1,30 +1,40 @@
 #include <stdio.h>
- 
-typedef struct reg_no {
+#include <stdlib.h>
+
+typedef struct reg_no
+{
     float info;
     struct reg_no *prox;
 } no;
 
-int estah_vazia (no *lista) {
+int estah_vazia(no *lista)
+{
     if (lista == NULL)
         return 1;
-    else return 0;
+    else
+        return 0;
 }
 
-no *cria_no(float valor) {
-    no *novo_no = (no *) malloc(sizeof(no));
+no *cria_no(float valor)
+{
+    no *novo_no = (no *)malloc(sizeof(no));
     novo_no->info = valor;
     novo_no->prox = NULL;
     return novo_no;
 }
 
-no *insere_no_fim(no *lista, float valor) {
+no *insere_no_fim(no *lista, float valor)
+{
     no *novo_no = cria_no(valor);
-    if (estah_vazia (lista)){
+    if (estah_vazia(lista))
+    {
         lista = novo_no;
-    } else {
+    }
+    else
+    {
         no *no_atual = lista;
-        while (no_atual->prox != NULL) {
+        while (no_atual->prox != NULL)
+        {
             no_atual = no_atual->prox;
         }
         no_atual->prox = novo_no;
@@ -32,19 +42,20 @@ no *insere_no_fim(no *lista, float valor) {
     return lista;
 }
 
-
-void libera_lista(no *lista) {
+void libera_lista(no *lista)
+{
     no *no_atual, *prox_no;
     no_atual = lista;
-    while (no_atual != NULL) {
+    while (no_atual != NULL)
+    {
         prox_no = no_atual->prox;
         free(no_atual);
         no_atual = prox_no;
     }
 }
 
-
-int main(){
+int main()
+{
 
     no *minha_lista = NULL;
 
