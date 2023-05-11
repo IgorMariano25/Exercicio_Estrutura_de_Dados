@@ -3,6 +3,11 @@
 
 typedef char String[255];
 
+void procedimentoMenuEndereco()
+{
+    printf("\n--------------------\n     ENDERECO\n--------------------\n");
+}
+
 struct registro_endereco
 {
     String logradouro;
@@ -34,6 +39,7 @@ int main()
 
     printf("Nome: %s\n", teste_pessoa.nome);
     printf("CPF: %s\n", teste_pessoa.cpf);
+    procedimentoMenuEndereco();
     printf("Logradoudo: %s\n", teste_pessoa.endereco.logradouro);
     printf("Numero: %d\n", teste_pessoa.endereco.numero);
     printf("bairro: %s\n", teste_pessoa.endereco.bairro);
