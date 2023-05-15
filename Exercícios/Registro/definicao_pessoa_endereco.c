@@ -8,6 +8,11 @@ void procedimentoMenuEndereco()
     printf("\n--------------------\n     ENDERECO\n--------------------\n");
 }
 
+void procedimentoMenuInformacoesPessoais()
+{
+    printf("\n------------------------------\n     INFORMACOES PESSOAIS\n------------------------------\n");
+}
+
 struct registro_endereco
 {
     String logradouro;
@@ -37,6 +42,7 @@ int main()
     strcpy(teste_pessoa.endereco.cidade, "cidade A");
     strcpy(teste_pessoa.endereco.estado, "estado B");
 
+    procedimentoMenuInformacoesPessoais();
     printf("Nome: %s\n", teste_pessoa.nome);
     printf("CPF: %s\n", teste_pessoa.cpf);
     procedimentoMenuEndereco();
