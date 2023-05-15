@@ -12,6 +12,13 @@ struct Produto
     int Quantidade;
 };
 
+void cabecalhoInformacoes()
+{
+    printf("\n------------------------------\n");
+    printf("     Informações do Produto\n");
+    printf("------------------------------\n");
+};
+
 int main()
 {
     setlocale(LC_ALL, "pt_BR");
@@ -21,7 +28,7 @@ int main()
     Novo_Produto.Preco = 959.00;
     Novo_Produto.Quantidade = 1;
 
-    printf("Informações do Produto\n");
+    cabecalhoInformacoes();
     printf("Código: %i\n", Novo_Produto.Codigo);
     printf("Nome: %s\n", Novo_Produto.Nome);
     printf("Preço: R$ %.2f\n", Novo_Produto.Preco);
