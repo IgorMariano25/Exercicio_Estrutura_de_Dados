@@ -164,18 +164,35 @@ void verificar_valor_na_posicao(no *lista, int valor_procurado)
     printf("%f", no_atual->info);
 }
 
-no insere_no_posicao(nolista, int posicao, int valor)
+no insere_no_posicao(no *lista, int posicao, int valor)
 {
     int comparador = 0;
-    no novo_no = cria_no(valor);
-    nono_atual = lista;
+    no *novo_no = cria_no(valor);
+    no *no_atual = lista;
     while (comparador != posicao - 1)
     {
         no_atual = no_atual->prox;
         comparador++;
-    };
+    }
     novo_no->prox = no_atual->prox;
     no_atual->prox = novo_no;
+}
+
+void remove_na_posicao(no *lista, int posicao)
+{
+    no *no_atual, *no_anterior = NULL;
+    no_atual = lista;
+    int verifica_posicao = 0;
+
+    while (verifica_posicao != posicao)
+    {
+        no_anterior = no_atual;
+        no_atual = no_atual->prox;
+        verifica_posicao++;
+    }
+
+    no_anterior->prox = no_atual->prox;
+    free(no_atual);
 }
 int main()
 {
@@ -196,6 +213,9 @@ int main()
     imprime_nos(minha_lista);
     pular_linha();
     verificar_valor_na_posicao(minha_lista, 2);
-    
+    pular_linha();
+    remove_na_posicao(minha_lista, 1);
+    imprime_nos(minha_lista);
+
     return 0;
 }
