@@ -164,6 +164,19 @@ void verificar_valor_na_posicao(no *lista, int valor_procurado)
     printf("%f", no_atual->info);
 }
 
+no insere_no_posicao(nolista, int posicao, int valor)
+{
+    int comparador = 0;
+    no novo_no = cria_no(valor);
+    nono_atual = lista;
+    while (comparador != posicao - 1)
+    {
+        no_atual = no_atual->prox;
+        comparador++;
+    };
+    novo_no->prox = no_atual->prox;
+    no_atual->prox = novo_no;
+}
 int main()
 {
 
