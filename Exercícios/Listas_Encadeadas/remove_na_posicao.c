@@ -194,6 +194,15 @@ void remove_na_posicao(no *lista, int posicao)
     no_anterior->prox = no_atual->prox;
     free(no_atual);
 }
+
+no *pop_lista_e_fila(no *lista)
+{
+    no *no_atual = lista;
+    lista = no_atual->prox;
+    free(no_atual);
+
+    return lista;
+}
 int main()
 {
 
